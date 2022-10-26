@@ -2,7 +2,7 @@ const slider = document.querySelector('.slider');
 const thumbs = document.querySelector('.thumbs');
 const container = document.querySelector('.container');
 
-const img = [
+const dati = [
   {
     immagine:"http://www.viaggiareonline.it/wp-content/uploads/2014/11/sweden_148857365.jpg",
     luogo: "Svezia",
@@ -35,6 +35,34 @@ const img = [
   },
 
 ];
+
+dati.forEach(dato => {
+  console.log(dato);
+  slider.innerHTML += `<div class='slider'> <img src="${dato.immagine}"/></div>
+  <div class="text">
+          <h3>"${dato.luogo}"</h3>
+          <p>"${dato.descrizione}</p>
+        </div>`
+});
+
+dati.forEach(dato => {
+  thumbs.innerHTML +=  `<div class='thumbs'> <img src="${dato.immagine}"/></div>`
+});
+
+const listThumbs = document.getElementsByClassName('item-thumbs');
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
